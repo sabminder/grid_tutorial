@@ -3,7 +3,7 @@
 <br>
 A simple project to show you how easy it is to create a grid layout with UICollectionView.
 
-<img src="#">
+<img src="https://s3-eu-west-1.amazonaws.com/sabminder/Image+resources/Create+grid+layout+UICollectionView.png" />
 
 <br>
 # Installation
