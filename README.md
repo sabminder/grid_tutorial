@@ -26,5 +26,5 @@ func viewDidLoad() {
 ```
 
 <br>
-# Credits
+# More information
 Check out my blog for more tutorials, projects, freebies like this, at <a href="sabminder.com">sabminder.com</a>
