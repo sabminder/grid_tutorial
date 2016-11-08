@@ -40,6 +40,9 @@ class GridLayout: UICollectionViewFlowLayout {
     }
 
     override func targetContentOffset(forProposedContentOffset proposedContentOffset: CGPoint) -> CGPoint {
+        if let collectionView = collectionView {
+            return collectionView.contentOffset
+        }
         return CGPoint.zero
     }
 
