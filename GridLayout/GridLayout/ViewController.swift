@@ -12,18 +12,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     @IBOutlet weak var collectionView: UICollectionView!
 
-    var gridLayout: GridLayout = GridLayout(numberOfColumns: 4)
+    var gridLayout: GridLayout = GridLayout(numberOfColumns: 3)
 
     var imagesToDisplay: [UIImage] = [UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!,
+                                      UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!,
                                       UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!,
+                                      UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!,
                                       UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!,
+                                      UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!,
                                       UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!,
-                                      UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!,
-                                      UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!,
-                                      UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!,
-                                      UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!,
-                                      UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!]
-
+                                      UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!]
     // MARK: view methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,6 +44,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         cell.imageView.image = image
 
         return cell
+    }
+
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+        gridLayout.invalidateLayout()
     }
 
 }
