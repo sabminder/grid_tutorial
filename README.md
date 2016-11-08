@@ -3,7 +3,7 @@
 <br>
 A simple project to show you how easy it is to create a grid layout with UICollectionView.
 
-<img src="#">
+<img src="https://s3-eu-west-1.amazonaws.com/sabminder/Image+resources/Create+grid+layout+UICollectionView.png" />
 
 <br>
 # Installation
@@ -26,5 +26,5 @@ func viewDidLoad() {
 ```
 
 <br>
-# Credits
+# More information
 Check out my blog for more tutorials, projects, freebies like this, at <a href="sabminder.com">sabminder.com</a>
