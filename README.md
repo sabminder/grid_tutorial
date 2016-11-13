@@ -28,3 +28,5 @@ func viewDidLoad() {
 <br>
 # More information
 Check out my blog for more tutorials, projects, freebies like this, at <a href="sabminder.com">sabminder.com</a>
+
+Check out the tutorial for this project <a href="http://sabminder.com/create-grid-layout-uicollectionview/">here</a>.
