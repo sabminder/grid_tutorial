@@ -32,6 +32,7 @@ class GridLayout: UICollectionViewFlowLayout {
                 return CGSize(width: itemWidth, height: itemHeight)
             }
 
+            // Default fallback
             return CGSize(width: 100, height: 100)
         }
         set {
