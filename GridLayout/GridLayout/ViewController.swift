@@ -11,8 +11,13 @@ import UIKit
 class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var columnChangerButton: UIBarButtonItem!
 
-    var gridLayout: GridLayout = GridLayout(numberOfColumns: 3)
+    var gridLayout: GridLayout!
+    lazy var listLayout: ListLayout = {
+        var listLayout = ListLayout(itemHeight: 180)
+        return listLayout
+    }()
 
     var imagesToDisplay: [UIImage] = [UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!,
                                       UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!,
@@ -22,12 +27,42 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                                       UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!,
                                       UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!,
                                       UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!]
+
+    @IBAction func changeNumberOfColumns() {
+        if gridLayout.numberOfColumns == 3 {
+            gridLayout.numberOfColumns = 2
+        } else {
+            gridLayout.numberOfColumns = 3
+        }
+
+        gridLayout.invalidateLayout()
+    }
+
+    @IBAction func changeLayout() {
+        if collectionView.collectionViewLayout == gridLayout {
+            // list layout
+            columnChangerButton.isEnabled = false
+            UIView.animate(withDuration: 0.1, animations: {
+                self.collectionView.collectionViewLayout.invalidateLayout()
+                self.collectionView.setCollectionViewLayout(self.listLayout, animated: false)
+            })
+        } else {
+            // grid layout
+            columnChangerButton.isEnabled = true
+            UIView.animate(withDuration: 0.1, animations: {
+                self.collectionView.collectionViewLayout.invalidateLayout()
+                self.collectionView.setCollectionViewLayout(self.gridLayout, animated: false)
+            })
+        }
+    }
+
     // MARK: view methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Images"
 
+        gridLayout = GridLayout(numberOfColumns: 3)
         collectionView.collectionViewLayout = gridLayout
         collectionView.reloadData()
     }
@@ -48,7 +83,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
-        gridLayout.invalidateLayout()
+        collectionView.collectionViewLayout.invalidateLayout()
     }
-
+    
 }

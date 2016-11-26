@@ -68,9 +68,21 @@
                             <constraint firstItem="HjU-V2-duq" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="zfp-sF-Ngj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="VNb-Dv-eDf"/>
+                    <navigationItem key="navigationItem" id="VNb-Dv-eDf">
+                        <barButtonItem key="leftBarButtonItem" title="Layout" id="0b9-qt-YYe">
+                            <connections>
+                                <action selector="changeLayout" destination="BYZ-38-t0r" id="1Ag-a7-T61"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Columns" id="XZa-qd-r99">
+                            <connections>
+                                <action selector="changeNumberOfColumns" destination="BYZ-38-t0r" id="XqF-SE-bkn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="HjU-V2-duq" id="eG7-Ds-9lK"/>
+                        <outlet property="columnChangerButton" destination="XZa-qd-r99" id="HMA-Gv-69I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
