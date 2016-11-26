@@ -8,7 +8,7 @@ A simple project to show you how easy it is to create a grid layout with UIColle
 <br>
 # Installation
 <br>
-Grab the GridLayout.swift file and drag it into your project to customise the look of your UICollectionView.
+Grab the GridLayout.swift and ListLayout.swift files and drag them into your project to customise the look of your UICollectionView.
 
 <br>
 # In this branch
