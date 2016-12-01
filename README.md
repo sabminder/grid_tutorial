@@ -30,3 +30,7 @@ func viewDidLoad() {
 Check out my blog for more tutorials, projects, freebies like this, at <a href="sabminder.com">sabminder.com</a>
 
 Check out the tutorial for this project <a href="http://sabminder.com/create-grid-layout-uicollectionview/">here</a>.
+
+<br>
+# To switch between layouts
+To learn how to switch between 1 layout to another, go check out this branch: <a href="https://github.com/sabminder/grid_tutorial/tree/switching_layouts">here</a>.
