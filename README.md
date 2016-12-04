@@ -11,6 +11,12 @@ A simple project to show you how easy it is to create a grid layout with UIColle
 Grab the GridLayout.swift file and drag it into your project to customise the look of your UICollectionView.
 
 <br>
+#In this branch
+<br>
+This branch was created to show you how to create custom NSObjects and datasource to display your Car objects in your UICollectionView.
+
+
+<br>
 # Usage
 <br>
 Just specify the number of columns you wish to display at initialisation and assign it to your collectionView. Simple as that. Per default the layout object is using 1-1pt for each space between rows and columns.
@@ -30,3 +36,5 @@ func viewDidLoad() {
 Check out my blog for more tutorials, projects, freebies like this, at <a href="sabminder.com">sabminder.com</a>
 
 Check out the tutorial for this project <a href="http://sabminder.com/create-grid-layout-uicollectionview/">here</a>.
+
+Source of images: <a href="http://carwallpapersfordesktop.org">http://carwallpapersfordesktop.org</a>
