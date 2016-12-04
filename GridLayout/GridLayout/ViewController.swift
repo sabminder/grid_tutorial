@@ -8,25 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class ViewController: UIViewController, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var columnChangerButton: UIBarButtonItem!
 
     var gridLayout: GridLayout!
     lazy var listLayout: ListLayout = {
-        var listLayout = ListLayout(itemHeight: 180)
+        var listLayout = ListLayout(itemHeight: 280)
         return listLayout
     }()
 
-    var imagesToDisplay: [UIImage] = [UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!,
-                                      UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!,
-                                      UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!,
-                                      UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!,
-                                      UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!,
-                                      UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!,
-                                      UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!,
-                                      UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!, UIImage(named: "IMG_1408")!, UIImage(named: "IMG_1411")!]
+    var dataSource: Datasource!
 
     @IBAction func changeNumberOfColumns() {
         if gridLayout.numberOfColumns == 3 {
@@ -60,25 +53,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        title = "Images"
+        title = "Cars"
 
-        gridLayout = GridLayout(numberOfColumns: 3)
+        dataSource = Datasource()
+        collectionView.dataSource = dataSource
+
+        gridLayout = GridLayout(numberOfColumns: 2)
         collectionView.collectionViewLayout = gridLayout
         collectionView.reloadData()
-    }
-
-    // MARK: collectionView methods
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return imagesToDisplay.count
-    }
-
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! ImageCollectionViewCell
-
-        let image = imagesToDisplay[indexPath.item]
-        cell.imageView.image = image
-
-        return cell
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

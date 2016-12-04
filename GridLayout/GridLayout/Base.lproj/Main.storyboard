@@ -38,19 +38,39 @@
                                             <rect key="frame" x="0.0" y="0.0" width="215" height="244"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hGb-rj-yno">
-                                                    <rect key="frame" x="0.0" y="0.0" width="215" height="244"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hGb-rj-yno">
+                                                    <rect key="frame" x="0.0" y="0.0" width="215" height="181.5"/>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Name of the car" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c2F-6R-RSt">
+                                                    <rect key="frame" x="10" y="186.5" width="195" height="19.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="$89000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ytp-Qe-HfE">
+                                                    <rect key="frame" x="10" y="216" width="195" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                         </view>
                                         <constraints>
+                                            <constraint firstItem="Ytp-Qe-HfE" firstAttribute="leading" secondItem="fmE-oQ-izh" secondAttribute="leading" constant="10" id="Fgz-7M-bPP"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ytp-Qe-HfE" secondAttribute="bottom" constant="10" id="NAh-r9-Pvg"/>
+                                            <constraint firstAttribute="trailing" secondItem="c2F-6R-RSt" secondAttribute="trailing" constant="10" id="OX0-H0-qHX"/>
+                                            <constraint firstItem="c2F-6R-RSt" firstAttribute="leading" secondItem="fmE-oQ-izh" secondAttribute="leading" constant="10" id="UPb-VF-Gsd"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ytp-Qe-HfE" secondAttribute="trailing" constant="10" id="aTX-fn-j4c"/>
+                                            <constraint firstItem="c2F-6R-RSt" firstAttribute="top" secondItem="hGb-rj-yno" secondAttribute="bottom" constant="5" id="dF4-PA-hNZ"/>
                                             <constraint firstItem="hGb-rj-yno" firstAttribute="top" secondItem="fmE-oQ-izh" secondAttribute="top" id="jSZ-2k-fWY"/>
-                                            <constraint firstAttribute="bottom" secondItem="hGb-rj-yno" secondAttribute="bottom" id="ldJ-FY-63t"/>
                                             <constraint firstItem="hGb-rj-yno" firstAttribute="leading" secondItem="fmE-oQ-izh" secondAttribute="leading" id="nXc-yp-Pf4"/>
                                             <constraint firstAttribute="trailing" secondItem="hGb-rj-yno" secondAttribute="trailing" id="sZy-ba-Zk0"/>
+                                            <constraint firstItem="Ytp-Qe-HfE" firstAttribute="top" secondItem="c2F-6R-RSt" secondAttribute="bottom" constant="10" id="uVW-rg-MXW"/>
                                         </constraints>
                                         <connections>
                                             <outlet property="imageView" destination="hGb-rj-yno" id="UIq-A0-S3S"/>
+                                            <outlet property="nameLabel" destination="c2F-6R-RSt" id="PHw-ok-cg5"/>
+                                            <outlet property="priceLabel" destination="Ytp-Qe-HfE" id="scw-HT-yVc"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -87,7 +107,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="862" y="139"/>
+            <point key="canvasLocation" x="861.60000000000002" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aiv-yK-ltL">
