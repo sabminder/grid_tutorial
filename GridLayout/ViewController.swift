@@ -63,6 +63,28 @@ class ViewController: UIViewController, UICollectionViewDelegate {
         collectionView.reloadData()
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+
+        let selectedCar = dataSource.carAtIndexPath(indexPath)
+        // 1. Do it with the segue
+        performSegue(withIdentifier: "selectCar", sender: selectedCar)
+
+        // 2. Do it manually
+//        if let destinationController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "detailVC") as? DetailViewController {
+//            destinationController.selectedCar = selectedCar
+//            navigationController?.pushViewController(destinationController, animated: true)
+//        }
+    }
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "selectCar" {
+            if let selectedCar = sender as? Car, let destinationViewController = segue.destination as? DetailViewController {
+                destinationViewController.selectedCar = selectedCar
+            }
+        }
+    }
+
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransition(to: size, with: coordinator)
         collectionView.collectionViewLayout.invalidateLayout()

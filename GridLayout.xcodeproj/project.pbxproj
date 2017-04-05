@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56092E671E954C04000305FD /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56092E661E954C04000305FD /* DetailViewController.swift */; };
 		561EE0D61DF43EB7000BBFAB /* Datasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561EE0D51DF43EB7000BBFAB /* Datasource.swift */; };
 		561EE0D81DF43F4A000BBFAB /* Car.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561EE0D71DF43F4A000BBFAB /* Car.swift */; };
 		564C09FC1DD1DE0E004EF732 /* ImageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564C09FB1DD1DE0E004EF732 /* ImageCollectionViewCell.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56092E661E954C04000305FD /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		561EE0D51DF43EB7000BBFAB /* Datasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datasource.swift; sourceTree = "<group>"; };
 		561EE0D71DF43F4A000BBFAB /* Car.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Car.swift; sourceTree = "<group>"; };
 		564C09FB1DD1DE0E004EF732 /* ImageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				5654BE9A1DC8BB5200A79992 /* AppDelegate.swift */,
 				564C09FB1DD1DE0E004EF732 /* ImageCollectionViewCell.swift */,
 				5654BE9C1DC8BB5200A79992 /* ViewController.swift */,
+				56092E661E954C04000305FD /* DetailViewController.swift */,
 				561EE0D71DF43F4A000BBFAB /* Car.swift */,
 				561EE0D51DF43EB7000BBFAB /* Datasource.swift */,
 				5654BEAF1DC8BB8000A79992 /* Grid layout */,
@@ -175,6 +178,7 @@
 				56BE27181DE4A9BB00636C56 /* ListLayout.swift in Sources */,
 				561EE0D81DF43F4A000BBFAB /* Car.swift in Sources */,
 				5654BE9B1DC8BB5200A79992 /* AppDelegate.swift in Sources */,
+				56092E671E954C04000305FD /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

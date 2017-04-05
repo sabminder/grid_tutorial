@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GwX-r6-xr1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="GwX-r6-xr1">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -103,11 +103,57 @@
                     <connections>
                         <outlet property="collectionView" destination="HjU-V2-duq" id="eG7-Ds-9lK"/>
                         <outlet property="columnChangerButton" destination="XZa-qd-r99" id="HMA-Gv-69I"/>
+                        <segue destination="ddS-pF-ghb" kind="show" identifier="selectCar" id="rrv-Wg-kSb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="861.60000000000002" y="138.98050974512745"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="aCW-Vj-ra3">
+            <objects>
+                <viewController storyboardIdentifier="detailVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="ddS-pF-ghb" customClass="DetailViewController" customModule="GridLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DGm-Xr-WSW"/>
+                        <viewControllerLayoutGuide type="bottom" id="pqH-2d-f1h"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0LP-aK-4yR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lh0-d5-gUD">
+                                <rect key="frame" x="0.0" y="64" width="375" height="276"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="276" id="dIi-UT-0EO"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vv9-G8-VHf">
+                                <rect key="frame" x="166" y="350" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vv9-G8-VHf" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0LP-aK-4yR" secondAttribute="leading" constant="10" id="KSm-Sb-buN"/>
+                            <constraint firstItem="vv9-G8-VHf" firstAttribute="top" secondItem="lh0-d5-gUD" secondAttribute="bottom" constant="10" id="NKg-IB-xGc"/>
+                            <constraint firstItem="lh0-d5-gUD" firstAttribute="leading" secondItem="0LP-aK-4yR" secondAttribute="leading" id="NVU-bC-puE"/>
+                            <constraint firstItem="vv9-G8-VHf" firstAttribute="centerX" secondItem="0LP-aK-4yR" secondAttribute="centerX" id="TSy-8i-iVM"/>
+                            <constraint firstItem="lh0-d5-gUD" firstAttribute="top" secondItem="DGm-Xr-WSW" secondAttribute="bottom" id="cz0-Np-EEa"/>
+                            <constraint firstAttribute="trailing" secondItem="lh0-d5-gUD" secondAttribute="trailing" id="j7x-Hf-t7L"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="vv9-G8-VHf" secondAttribute="trailing" constant="10" id="jiF-kJ-R83"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="lh0-d5-gUD" id="eJH-jI-Q9k"/>
+                        <outlet property="priceLabel" destination="vv9-G8-VHf" id="qIZ-hy-Mde"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dc5-mK-xvm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1581.5999999999999" y="138.98050974512745"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Aiv-yK-ltL">

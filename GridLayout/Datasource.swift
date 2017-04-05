@@ -10,7 +10,7 @@ import UIKit
 
 class Datasource: NSObject, UICollectionViewDataSource {
 
-    var carsToDisplay: [Car] = []
+    private var carsToDisplay: [Car] = []
 
     override init() {
         super.init()
@@ -23,6 +23,10 @@ class Datasource: NSObject, UICollectionViewDataSource {
                          Car(objectID: "17", name: "Porsche Macan", price: 89000, salePrice: nil, carDescription: "vknfblf kb lnkfndbf klnf dkl", image: UIImage(named: "porsche macan")!)]
 
         carsToDisplay.sort(by: { $0.name < $1.name })
+    }
+
+    func carAtIndexPath(_ indexPath: IndexPath) -> Car {
+        return carsToDisplay[indexPath.item]
     }
 
     // MARK: collectionView methods
