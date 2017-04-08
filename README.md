@@ -6,12 +6,7 @@ A simple project to show you how easy it is to pass objects between 2 viewContro
 <img src="https://s3-eu-west-1.amazonaws.com/sabminder/Image+resources/Pass+objects+between+viewcontrollers+in+swift+using+uistoryboardsegue.png" />
 
 <br>
-# Installation
-<br>
-Simply run the project.
-
-<br>
-#In this branch
+# In this branch
 <br>
 This branch was created to show you how to pass objects between 2 viewControllers.
 
