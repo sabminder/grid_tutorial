@@ -1,40 +1,24 @@
-# Create a custom grid layout using UICollectionView
+# Pass objects between UIViewControllers in Swift
 
 <br>
-A simple project to show you how easy it is to create a grid layout with UICollectionView.
+A simple project to show you how easy it is to pass objects between 2 viewControllers.
 
-<img src="https://s3-eu-west-1.amazonaws.com/sabminder/Image+resources/Create+grid+layout+UICollectionView.png" />
+<img src="https://s3-eu-west-1.amazonaws.com/sabminder/Image+resources/Pass+objects+between+viewcontrollers+in+swift+using+uistoryboardsegue.png" />
 
 <br>
 # Installation
 <br>
-Grab the GridLayout.swift file and drag it into your project to customise the look of your UICollectionView.
+Simply run the project.
 
 <br>
 #In this branch
 <br>
-This branch was created to show you how to create custom NSObjects and datasource to display your Car objects in your UICollectionView.
-
-
-<br>
-# Usage
-<br>
-Just specify the number of columns you wish to display at initialisation and assign it to your collectionView. Simple as that. Per default the layout object is using 1-1pt for each space between rows and columns.
-
-```swift
-var gridLayout: GridLayout = GridLayout(numberOfColumns: 4)
-
-func viewDidLoad() {
-  super.viewDidLoad()
-  ...
-  collectionView.collectionViewLayout = gridLayout
-}
-```
+This branch was created to show you how to pass objects between 2 viewControllers.
 
 <br>
 # More information
 Check out my blog for more tutorials, projects, freebies like this, at <a href="sabminder.com">sabminder.com</a>
 
-Check out the tutorial for this project <a href="http://sabminder.com/create-grid-layout-uicollectionview/">here</a>.
+Check out the tutorial for this project <a href="http://sabminder.com/passing-objects-between-viewcontrollers-in-swift/">here</a>.
 
 Source of images: <a href="http://carwallpapersfordesktop.org">http://carwallpapersfordesktop.org</a>
